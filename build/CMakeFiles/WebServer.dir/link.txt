@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -std=c++11  -shared -Wl,-soname,libWebServer.so -o libWebServer.so CMakeFiles/WebServer.dir/httpserver/Httpserver.cpp.o CMakeFiles/WebServer.dir/socket/Socket.cpp.o 

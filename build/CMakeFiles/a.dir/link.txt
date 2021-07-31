@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11  -rdynamic CMakeFiles/a.dir/main.cpp.o  -o a  -Wl,-rpath,/home/hanzhh/WebServer/build libWebServer.so 
