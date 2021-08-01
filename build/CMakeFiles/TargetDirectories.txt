@@ -1,4 +1,0 @@
-/home/hanzhh/WebServer/build/CMakeFiles/rebuild_cache.dir
-/home/hanzhh/WebServer/build/CMakeFiles/edit_cache.dir
-/home/hanzhh/WebServer/build/CMakeFiles/a.dir
-/home/hanzhh/WebServer/build/CMakeFiles/WebServer.dir
