@@ -12,11 +12,11 @@ Sockaddr_in::Sockaddr_in(const std::string& host, const int port) {
     setmsockaddr_in(host, port);
 }
 
-std::ostream& Sockaddr_in::operator<<(std::ostream& os) {
+std::ostream& operator<<(std::ostream& os, const Sockaddr_in& obj ) {
     char host[20];
     bzero(host, sizeof(host));
-    inet_ntop(AF_INET, &msockaddr_in->sin_addr.s_addr, host, sizeof(host));
-    int port = ntohs(msockaddr_in->sin_port);
+    inet_ntop(AF_INET, &obj.msockaddr_in->sin_addr.s_addr, host, sizeof(host));
+    int port = ntohs(obj.msockaddr_in->sin_port);
     os << host << ":" << port;
     return os; 
 }

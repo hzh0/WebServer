@@ -13,10 +13,9 @@ public:
     Sockaddr_in(const std::string& host, const int port);
     void setmsockaddr_in(const std::string& host, const int port);
     virtual ~Sockaddr_in(){}
+    friend std::ostream& operator<<(std::ostream& os, const Sockaddr_in&);
 
-    std::ostream& operator<<(std::ostream& os);
-
-private:
+public:
     std::shared_ptr<sockaddr_in> msockaddr_in;
 };
 

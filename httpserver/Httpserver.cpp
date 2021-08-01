@@ -14,9 +14,7 @@ Httpserver::Httpserver(const std::string& host, const int port) {
 }
 
 void Httpserver::Bind() {
-    std::cout << mfd << std::endl;
-    *msockaddr << std::cout;
-    int result = bind(mfd, (sockaddr*)&(*msockaddr), sizeof(sockaddr));
+    int result = bind(mfd, (sockaddr*)&(*(msockaddr->msockaddr_in)), sizeof(sockaddr));
     assert(result == 0);
 }
 
@@ -26,7 +24,7 @@ void Httpserver::Listen(const int num) {
 
 void Httpserver::run() {
     Bind();
-    std::cout << "bind : " << msockaddr << " success" << std::endl;
+    std::cout << "bind : " << *msockaddr << " success" << std::endl;
     Listen(200);
     std::cout << "listenning..." << std::endl;
 }
